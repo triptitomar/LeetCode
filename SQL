@@ -1,0 +1,27 @@
+SQL queries:
+
+Q - Write a solution to report the first name, last name, city, and state of each person in the Person table. If the address of a personId is not present in the Address table, report null instead.
+Return the result table in any order.
+
+>>select Person.firstname,Person.lastname,Address.city,Address.state 
+from Person LEFT JOIN Address
+on Person.personId = Address.personId;
+
+Q - Write a solution to find the second highest distinct salary from the Employee table. If there is no second highest salary, return null (return None in Pandas).
+
+>>SELECT(
+Select DISTINCT salary 
+from Employee 
+ORDER BY salary DESC
+LIMIT 1 OFFSET 1)
+AS SecondHighestSalary;
+
+Q - Write a solution to find employees who have the highest salary in each of the departments. Return the result table in any order.
+
+>>SELECT Department.name AS Department, Employee.name as Employee, Employee.salary as Salary
+from Employee JOIN Department
+on Employee.departmentId  = Department.id
+where (Employee.departmentId, Employee.salary) 
+in ( select departmentId , max(salary) 
+from employee
+group by departmentId);
