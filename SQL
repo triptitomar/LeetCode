@@ -26,9 +26,9 @@ in ( select departmentId , max(salary)
 from employee
 group by departmentId);
 
-
-Write a solution to find the employees who earn more than their managers. Return the result table in any order.
+Q - Write a solution to find the employees who earn more than their managers. Return the result table in any order.
 select E.name AS Employee
-from Employee E
+
+>>from Employee E
 join Employee M on E.MANAGERId=M.Id
 where E.salary>M.salary
