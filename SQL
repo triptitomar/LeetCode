@@ -25,3 +25,10 @@ where (Employee.departmentId, Employee.salary)
 in ( select departmentId , max(salary) 
 from employee
 group by departmentId);
+
+
+
+select E.name AS Employee
+from Employee E
+join Employee M on E.MANAGERId=M.Id
+where E.salary>M.salary
