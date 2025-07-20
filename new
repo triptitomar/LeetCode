@@ -1,0 +1,10 @@
+class Solution:
+    def maxSubsequence(self, nums, k):
+        # Step 1 & 2: Take k largest elements along with index
+        top_k = sorted(enumerate(nums), key=lambda x: x[1], reverse=True)[:k]
+        
+        # Step 3: Sort selected k elements by original index
+        top_k.sort(key=lambda x: x[0])
+        
+        # Step 4: Return the values
+        return [val for idx, val in top_k]
