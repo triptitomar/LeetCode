@@ -32,3 +32,10 @@ select E.name AS Employee
 >>from Employee E
 join Employee M on E.MANAGERId=M.Id
 where E.salary>M.salary
+
+
+DELETE p1
+FROM Person p1
+JOIN Person p2
+ON p1.email = p2.email AND p1.id > p2.id;
+
