@@ -6,23 +6,18 @@ This contains my curated solutions to Python and Database (SQL) problems from Le
 As an aspiring Data Analyst / Data Scientist, solving LeetCode problems helps me:
 # Strengthen my SQL querying skills for data manipulation & analysis
 # Sharpen Python skills for data processing, ETL tasks, and algorithmic thinking
-# Practice real-world data logic in a competitive environment
+# Practice real-world data logic in a competitive environment**
 
 🧠 Focus Areas
    🔍 SQL Problems
-    Joins (INNER, LEFT, RIGHT)
-    Aggregations (GROUP BY, COUNT, SUM, AVG)
-    Window Functions (RANK, DENSE_RANK, ROW_NUMBER)
+       # Joins (INNER, LEFT, RIGHT)
+       # Aggregations (GROUP BY, COUNT, SUM, AVG)
+       # Window Functions (RANK, DENSE_RANK, ROW_NUMBER)
+       # Subqueries, CTEs, and Nested Queries
+       # Case statements and Conditional Logic
 
-Subqueries, CTEs, and Nested Queries
-
-Case statements and Conditional Logic
-
-🐍 Python Problems
-Data structure manipulation (Lists, Tuples, Dictionaries)
-
-Algorithmic problem solving (Loops, Conditions, Recursion)
-
-String and Date manipulation
-
-Basic statistics and data preprocessing logic
+   🐍 Python Problems
+       # Data structure manipulation (Lists, Tuples, Dictionaries)
+       # Algorithmic problem solving (Loops, Conditions, Recursion)
+       # String and Date manipulation
+       # Basic statistics and data preprocessing logic
