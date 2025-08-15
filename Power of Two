@@ -17,3 +17,12 @@ class Solution:
         while (n % 3 == 0):
             n//=3
         return n == 1
+
+class Solution:
+    def isPowerOfFour(self, n: int) -> bool:
+        if n == 0:
+            return False
+        else:
+            while n % 4 == 0:
+                n//=4
+        return n == 1
