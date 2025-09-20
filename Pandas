@@ -8,3 +8,26 @@ def order_scores(scores: pd.DataFrame) -> pd.DataFrame:
     result = scores[['score', 'rank']].sort_values(by='score', ascending=False).reset_index(drop=True)
     
     return result  # Use return instead of print
+
+
+import pandas as pd
+
+def reformat_table(department: pd.DataFrame) -> pd.DataFrame:
+    # Pivot the table
+    result = department.pivot_table(
+        index="id",
+        columns="month",
+        values="revenue",
+        aggfunc="sum"
+    )
+
+    # Define months in order
+    months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+
+    # Reindex columns in month order
+    result = result.reindex(columns=months)
+
+    # Rename columns to match format (e.g., Jan_Revenue)
+    result = result.add_suffix("_Revenue").reset_index()
+
+    return result
